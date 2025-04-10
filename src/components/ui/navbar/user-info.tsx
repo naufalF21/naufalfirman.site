@@ -1,11 +1,10 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { execSync } from "child_process";
 import { Button } from "../button";
 import { GetTime } from "./get-time";
-import { env } from "~/env";
 
-const UserInfo = () => {
+const UserInfo = async () => {
+  const { execSync } = await import("child_process");
   const commitHash = execSync("git rev-parse --short HEAD").toString().trim();
 
   return (
@@ -22,9 +21,7 @@ const UserInfo = () => {
             <Icon icon="radix-icons:commit" width="20" height="20" />
             <Link href="https://github.com/naufalF21/naufalfirman.site">
               <Button variant="link" size="xs" className="text-sm">
-                {env.NODE_ENV === "development"
-                  ? commitHash
-                  : process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA?.slice(0, 7)}
+                {commitHash}
               </Button>
             </Link>
           </li>
