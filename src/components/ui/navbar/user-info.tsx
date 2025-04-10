@@ -1,10 +1,10 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { execSync } from "child_process";
 import { Button } from "../button";
 import { GetTime } from "./get-time";
 
-const UserInfo = async () => {
-  const { execSync } = await import("child_process");
+const UserInfo = () => {
   const commitHash = execSync("git rev-parse --short HEAD").toString().trim();
 
   return (
