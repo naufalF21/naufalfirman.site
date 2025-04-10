@@ -1,11 +1,21 @@
+"use client";
+
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { execSync } from "child_process";
 import { Button } from "../button";
 import { GetTime } from "./get-time";
+import { api } from "~/trpc/react";
 
 const UserInfo = () => {
-  const commitHash = execSync("git rev-parse --short HEAD").toString().trim();
+  const owner = "naufalF21";
+  const repo = "naufalfirman.site";
+  const limit = 1; // Number of commits to show
+
+  const { data: commits } = api.github.getShortCommits.useQuery({
+    owner,
+    repo,
+    limit,
+  });
 
   return (
     <div className="bg-primary-foreground flex justify-center text-sm">
@@ -21,7 +31,7 @@ const UserInfo = () => {
             <Icon icon="radix-icons:commit" width="20" height="20" />
             <Link href="https://github.com/naufalF21/naufalfirman.site">
               <Button variant="link" size="xs" className="text-sm">
-                {commitHash}
+                {commits?.length ? commits[0]?.shortSha : "-"}
               </Button>
             </Link>
           </li>
