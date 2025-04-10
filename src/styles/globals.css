@@ -9,11 +9,6 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 } */
 
-@theme {
-  --color-theme-dark: #191a1b;
-  --color-theme-gray: #d9d9d9;
-}
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -128,4 +123,15 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #0f172b;
+}
+
+::selection {
+  color: white;
+  background: #0f172b;
 }
