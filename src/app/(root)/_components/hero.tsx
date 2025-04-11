@@ -15,7 +15,7 @@ const Hero = () => {
         Pendidikan. Prior to this, I gained valuable experience working on
         product design for Bukalapak, startups, and with various agencies.
       </p>
-      <Link href="/#work" scroll={false}>
+      <Link href="/#work" scroll={true}>
         <Button className="w-fit text-lg" variant="outline" size="lg">
           Selected Work
           <Icon icon="mage:arrow-down" width="24" height="24" />
