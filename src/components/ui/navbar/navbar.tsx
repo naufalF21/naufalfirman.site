@@ -35,7 +35,7 @@ const Navbar = () => {
                 {["home", "work", "about"].map((item) => (
                   <NavigationMenuItem key={item} className="capitalize">
                     <Link
-                      href={`/${item === "home" ? "" : item}`}
+                      href={`/${item === "home" ? "" : "#" + item}`}
                       legacyBehavior
                       passHref
                     >

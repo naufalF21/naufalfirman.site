@@ -3,7 +3,7 @@ import { ContentLayout } from "~/components/layouts/content-layout";
 const About = () => {
   return (
     <ContentLayout title="What I am up to now">
-      <ul className="flex flex-col gap-6">
+      <ul className="flex flex-col gap-6" id="about">
         <li className="flex flex-col gap-3 border-b pb-6">
           <div className="flex flex-col text-lg">
             <span>Scope Client - Present</span>
