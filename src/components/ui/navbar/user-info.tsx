@@ -29,7 +29,10 @@ const UserInfo = () => {
           </li>
           <li className="flex items-center">
             <Icon icon="radix-icons:commit" width="20" height="20" />
-            <Link href="https://github.com/naufalF21/naufalfirman.site">
+            <Link
+              href="https://github.com/naufalF21/naufalfirman.site"
+              target="_blank"
+            >
               <Button variant="link" size="xs" className="text-sm">
                 {commits?.length ? commits[0]?.shortSha : "-"}
               </Button>
