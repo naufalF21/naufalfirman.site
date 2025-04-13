@@ -1,3 +1,4 @@
+import { Footer } from "~/components/ui/footer/footer";
 import { Navbar } from "~/components/ui/navbar";
 
 const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
@@ -5,6 +6,7 @@ const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     <main className="text-primary font-medium">
       <Navbar />
       {children}
+      <Footer />
     </main>
   );
 };
