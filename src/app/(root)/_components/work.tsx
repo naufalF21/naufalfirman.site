@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import { ContentLayout } from "~/components/layouts/content-layout";
 import { Badge } from "~/components/ui/badge";
@@ -11,8 +12,9 @@ const Work = () => {
             id="work"
             className="bg-primary-foreground flex h-[693px] w-full items-center justify-center rounded-3xl"
           >
-            project
+            <Icon icon="eos-icons:bubble-loading" width="24" height="24" />
           </div>
+
           <div className="flex justify-between">
             <Link href="#" className="underline-offset-4 hover:underline">
               Absence Web
@@ -32,7 +34,7 @@ const Work = () => {
         </li>
         <li className="flex flex-col gap-6">
           <div className="bg-primary-foreground flex h-[693px] w-full items-center justify-center rounded-3xl">
-            project
+            <Icon icon="eos-icons:bubble-loading" width="24" height="24" />
           </div>
           <div className="flex justify-between">
             <Link href="#" className="underline-offset-4 hover:underline">
