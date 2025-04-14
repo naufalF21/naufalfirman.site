@@ -34,7 +34,7 @@ const Work = () => {
               </Link>
             </div>
             <div className="flex w-2xl flex-col gap-3">
-              <p>
+              <p className="font-normal">
                 An e-learning platform providing diverse online courses and
                 hands-on offline training programs for all audiences.
               </p>
@@ -68,7 +68,7 @@ const Work = () => {
               </Link>
             </div>
             <div className="flex w-2xl flex-col gap-3">
-              <p>
+              <p className="font-normal">
                 An e-attendance platform for AlgoStudio employees, featuring
                 attendance, leave, and overtime management.
               </p>
