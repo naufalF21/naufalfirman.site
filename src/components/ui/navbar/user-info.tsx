@@ -18,9 +18,9 @@ const UserInfo = () => {
   });
 
   return (
-    <div className="bg-primary-foreground flex justify-center text-sm">
-      <div className="w-[950px]">
-        <ul className="flex gap-6 py-3">
+    <div className="bg-primary-foreground flex px-6 text-sm lg:justify-center lg:px-0">
+      <div className="w-full lg:w-[950px]">
+        <ul className="flex justify-between gap-6 py-3 md:justify-start">
           <li className="flex items-center gap-2">
             <Icon icon="mage:clock" width="20" height="20" />
             <span>

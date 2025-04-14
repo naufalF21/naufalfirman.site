@@ -1,7 +1,6 @@
 "use client";
 
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { ContentLayout } from "~/components/layouts/content-layout";
 import { Button } from "../button";
 
 const Footer = () => {
@@ -12,10 +11,10 @@ const Footer = () => {
     });
   };
   return (
-    <div className="bg-primary text-white">
-      <ContentLayout className="gap-0 pt-0">
-        <div className="flex items-center justify-between py-6">
-          <span className="text-sm font-normal">
+    <div className="bg-primary text-white lg:flex lg:justify-center">
+      <div className="lg:w-[950px]">
+        <div className="flex items-center justify-between px-6 py-6 lg:px-0">
+          <span className="text-xs font-normal md:text-sm">
             Created by Naufal Firman © 2025
           </span>
           <Button
@@ -27,7 +26,7 @@ const Footer = () => {
             <Icon icon="mage:arrow-up" width="24" height="24" />
           </Button>
         </div>
-      </ContentLayout>
+      </div>
     </div>
   );
 };

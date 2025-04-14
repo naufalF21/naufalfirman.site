@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "../avatar";
 import {
@@ -10,14 +12,18 @@ import {
 
 import { UserInfo } from "./user-info";
 import { Button } from "../button";
+import { useState } from "react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <header>
       {/* user info */}
       <UserInfo />
-      <div className="flex justify-center border-b py-3">
-        <div className="w-[950px]">
+      <div className="flex justify-center border-b px-6 py-3 lg:px-0">
+        <div className="w-full lg:w-[950px]">
           <div className="flex items-center justify-between">
             {/* avatar */}
             <Link href="/">
@@ -31,7 +37,7 @@ const Navbar = () => {
             </Link>
             {/* navigation menu */}
             <NavigationMenu>
-              <NavigationMenuList className="gap-6">
+              <NavigationMenuList className="hidden gap-6 lg:flex">
                 {["home", "work", "about"].map((item) => (
                   <NavigationMenuItem key={item} className="capitalize">
                     <Link
@@ -51,8 +57,18 @@ const Navbar = () => {
             </NavigationMenu>
             {/* resume button */}
             <Link href="https://ckn96wqsiq.ufs.sh/f/VyAcii40YBsbGlyhPGssHJKIaYh9P3VM2WFbCR6dgLE1XzDT">
-              <Button className="cursor-pointer">Resume</Button>
+              <Button className="hidden cursor-pointer lg:block">Resume</Button>
             </Link>
+            <button
+              className="lg:hidden"
+              onClick={() => setIsOpen((prev) => !prev)}
+            >
+              {isOpen ? (
+                <Icon icon="mage:minus" width="30" height="30" />
+              ) : (
+                <Icon icon="mage:dash-menu" width="30" height="30" />
+              )}
+            </button>
           </div>
         </div>
       </div>

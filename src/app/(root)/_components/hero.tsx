@@ -9,14 +9,14 @@ const Hero = () => {
       title="Hello, I am Naufal Firman from Indonesia. A fullstack web developer obsessed with crafting emerging tech."
       gap="sm"
     >
-      <p className="text-2xl font-normal">
+      <p className="text-lg font-normal md:text-2xl">
         Currently, I work as a freelance web developer. I build websites for
         clients in different industries. Previously, I gained valuable
         experience in building websites from freelancing and internship during
         college.
       </p>
       <Link href="/#work" scroll={true}>
-        <Button className="w-fit text-lg" variant="outline" size="lg">
+        <Button className="w-full text-lg md:w-fit" variant="outline" size="lg">
           Selected Work
           <Icon icon="mage:arrow-down" width="24" height="24" />
         </Button>

@@ -21,16 +21,31 @@ const Contact = () => {
     }
   };
 
+  const sosials = [
+    {
+      name: "Github",
+      link: "https://github.com/naufalF21",
+    },
+    {
+      name: "Linkedin",
+      link: "https://www.linkedin.com/in/naufal-firman/",
+    },
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/naufalfirman__/",
+    },
+  ];
+
   return (
     <ContentLayout title="Feel free to reach out" gap="sm">
       <div className="flex flex-col gap-12 pb-6 font-normal">
-        <p className="text-2xl">
+        <p className="text-lg md:text-2xl">
           I am always open to new opportunities and collaborations. If you have
           any questions or need help with a project,
           <Button
             variant="link"
             size="xs"
-            className="hover:decoration-primary text-2xl font-normal underline underline-offset-4 [&_svg:not([class*='size-'])]:size-6"
+            className="hover:decoration-primary -mx-2 text-xl font-normal underline underline-offset-4 md:mx-0 md:text-2xl [&_svg:not([class*='size-'])]:size-5 md:[&_svg:not([class*='size-'])]:size-6"
             onClick={handleCopy}
           >
             {isCopied ? (
@@ -45,34 +60,22 @@ const Contact = () => {
         </p>
         <p className="underline-offset-2">
           Follow me for more thoughts and updates on
-          <Link
-            href="https://github.com/naufalF21"
-            target="_blank"
-            className="inline-flex underline"
-          >
-            <Button variant="link" size="xs" className="px-1 py-0 font-normal">
-              Github,
-            </Button>
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/naufal-firman/"
-            target="_blank"
-            className="inline-flex underline"
-          >
-            <Button variant="link" size="xs" className="px-1 py-0 font-normal">
-              Linkedin
-            </Button>
-          </Link>
-          and
-          <Link
-            href="https://www.instagram.com/naufalfirman__/"
-            target="_blank"
-            className="inline-flex underline"
-          >
-            <Button variant="link" size="xs" className="px-1 py-0 font-normal">
-              Instagram
-            </Button>
-          </Link>
+          {sosials.map((sosial, index) => (
+            <Link
+              href={sosial.link}
+              target="_blank"
+              className="inline-flex underline"
+              key={index}
+            >
+              <Button
+                variant="link"
+                size="xs"
+                className="px-1 py-0 font-normal"
+              >
+                {sosial.name}
+              </Button>
+            </Link>
+          ))}
         </p>
       </div>
     </ContentLayout>
