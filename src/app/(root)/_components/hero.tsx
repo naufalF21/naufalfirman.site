@@ -6,14 +6,14 @@ import { Button } from "~/components/ui/button";
 const Hero = () => {
   return (
     <ContentLayout
-      title="Afnizar is a product designer who specializes in user interfaces,
-            design systems, and strategy"
+      title="Hello, I am Naufal Firman from Indonesia. A fullstack web developer obsessed with crafting emerging tech."
       gap="sm"
     >
       <p className="text-2xl font-normal">
-        Currently, Im working at GovTech Edu, where I design platforms for Rapor
-        Pendidikan. Prior to this, I gained valuable experience working on
-        product design for Bukalapak, startups, and with various agencies.
+        Currently, I work as a freelance web developer. I build websites for
+        clients in different industries. Previously, I gained valuable
+        experience in building websites from freelancing and internship during
+        college.
       </p>
       <Link href="/#work" scroll={true}>
         <Button className="w-fit text-lg" variant="outline" size="lg">
