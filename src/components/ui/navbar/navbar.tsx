@@ -10,7 +10,6 @@ import {
   navigationMenuTriggerStyle,
 } from "../navigation-menu";
 
-import { UserInfo } from "./user-info";
 import { Button } from "../button";
 import { useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -19,9 +18,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header>
-      {/* user info */}
-      <UserInfo />
+    <nav className="sticky top-0 left-0 z-50 bg-white">
       <div className="flex justify-center border-b px-6 py-3 lg:px-0">
         <div className="w-full lg:w-[950px]">
           <div className="flex items-center justify-between">
@@ -72,7 +69,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
 
