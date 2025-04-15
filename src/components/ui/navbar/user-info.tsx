@@ -5,17 +5,24 @@ import Link from "next/link";
 import { Button } from "../button";
 import { GetTime } from "./get-time";
 import { api } from "~/trpc/react";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const UserInfo = () => {
   const owner = "naufalF21";
   const repo = "naufalfirman.site";
   const limit = 1; // Number of commits to show
 
-  const { data: commits } = api.github.getShortCommits.useQuery({
-    owner,
-    repo,
-    limit,
-  });
+  const { data: commits } = api.github.getShortCommits.useQuery(
+    {
+      owner,
+      repo,
+      limit,
+    },
+    {
+      staleTime: 1000 * 60 * 10, // 10 minutes until data becomes stale
+      gcTime: 1000 * 60 * 60, // 60 minutes until cache is cleared
+    },
+  );
 
   return (
     <div className="bg-primary-foreground flex px-6 text-sm lg:justify-center lg:px-0">
@@ -40,6 +47,7 @@ const UserInfo = () => {
           </li>
         </ul>
       </div>
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </div>
   );
 };
