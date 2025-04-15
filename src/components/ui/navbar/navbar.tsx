@@ -13,12 +13,18 @@ import {
 import { Button } from "../button";
 import { useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { MobileNav } from "./mobile-nav";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="sticky top-0 left-0 z-50 bg-white">
+      <MobileNav isOpen={isOpen} handleCloseMenu={handleCloseMenu} />
       <div className="flex justify-center border-b px-6 py-3 lg:px-0">
         <div className="w-full lg:w-[950px]">
           <div className="flex items-center justify-between">
@@ -56,15 +62,8 @@ const Navbar = () => {
             <Link href="https://ckn96wqsiq.ufs.sh/f/VyAcii40YBsbGlyhPGssHJKIaYh9P3VM2WFbCR6dgLE1XzDT">
               <Button className="hidden cursor-pointer lg:block">Resume</Button>
             </Link>
-            <button
-              className="lg:hidden"
-              onClick={() => setIsOpen((prev) => !prev)}
-            >
-              {isOpen ? (
-                <Icon icon="mage:minus" width="30" height="30" />
-              ) : (
-                <Icon icon="mage:dash-menu" width="30" height="30" />
-              )}
+            <button className="lg:hidden" onClick={() => setIsOpen(true)}>
+              <Icon icon="mage:dash-menu" width="30" height="30" />
             </button>
           </div>
         </div>

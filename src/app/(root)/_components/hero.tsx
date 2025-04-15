@@ -15,12 +15,30 @@ const Hero = () => {
         experience in building websites from freelancing and internship during
         college.
       </p>
-      <Link href="/#work" scroll={true}>
-        <Button className="w-full text-lg md:w-fit" variant="outline" size="lg">
-          Selected Work
-          <Icon icon="mage:arrow-down" width="24" height="24" />
-        </Button>
-      </Link>
+      <div className="flex flex-col gap-3 md:flex-row">
+        <Link href="/#work" scroll={true}>
+          <Button
+            className="w-full text-lg md:w-fit"
+            variant="outline"
+            size="lg"
+          >
+            Selected Work
+            <Icon icon="mage:arrow-down" width="24" height="24" />
+          </Button>
+        </Link>
+        <Link
+          href="https://ckn96wqsiq.ufs.sh/f/VyAcii40YBsbGlyhPGssHJKIaYh9P3VM2WFbCR6dgLE1XzDT"
+          className="lg:hidden"
+        >
+          <Button
+            className="w-full text-lg md:w-fit"
+            variant="default"
+            size="lg"
+          >
+            Resume
+          </Button>
+        </Link>
+      </div>
     </ContentLayout>
   );
 };
