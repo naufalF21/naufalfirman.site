@@ -8,7 +8,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "../navigation-menu";
+} from "./navigation-menu";
 
 import { Button } from "../button";
 import { useState } from "react";
