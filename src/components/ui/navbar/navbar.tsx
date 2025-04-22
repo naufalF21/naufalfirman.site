@@ -62,7 +62,10 @@ const Navbar = () => {
             <Link href="https://ckn96wqsiq.ufs.sh/f/VyAcii40YBsbGlyhPGssHJKIaYh9P3VM2WFbCR6dgLE1XzDT">
               <Button className="hidden cursor-pointer lg:block">Resume</Button>
             </Link>
-            <button className="lg:hidden" onClick={() => setIsOpen(true)}>
+            <button
+              className="cursor-pointer lg:hidden"
+              onClick={() => setIsOpen(true)}
+            >
               <Icon icon="mage:dash-menu" width="30" height="30" />
             </button>
           </div>
