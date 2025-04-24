@@ -43,17 +43,12 @@ const Navbar = () => {
               <NavigationMenuList className="hidden gap-6 lg:flex">
                 {["home", "work", "about"].map((item) => (
                   <NavigationMenuItem key={item} className="capitalize">
-                    <Link
+                    <NavigationMenuLink
                       href={`/${item === "home" ? "" : "#" + item}`}
-                      legacyBehavior
-                      passHref
+                      className={navigationMenuTriggerStyle()}
                     >
-                      <NavigationMenuLink
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        {item}
-                      </NavigationMenuLink>
-                    </Link>
+                      {item}
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>
