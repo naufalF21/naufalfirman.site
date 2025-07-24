@@ -6,7 +6,7 @@ import { Button } from "~/components/ui/button";
 const Hero = () => {
   return (
     <ContentLayout
-      title="Hello, I am Naufal Firman from Indonesia. A fullstack web developer obsessed with crafting emerging tech. Casino jackpot"
+      title="Hello, I am Naufal Firman from Indonesia. A fullstack web developer obsessed with crafting emerging tech."
       gap="sm"
     >
       <p className="text-lg font-normal md:text-2xl">
