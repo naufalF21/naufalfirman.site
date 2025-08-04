@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import { TestingNotice } from "./(root)/_components/testing-notice";
 
 export const metadata: Metadata = {
   title: "Naufal Firman",
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.className}`}>
       <body>
+        <TestingNotice />
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
