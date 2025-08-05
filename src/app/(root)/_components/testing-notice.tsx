@@ -6,7 +6,7 @@ import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert";
 import { Button } from "~/components/ui/button";
 
 export function TestingNotice() {
-  const [showNotice, setShowNotice] = useState(false);
+  const [showNotice, setShowNotice] = useState(true);
 
   // useEffect(() => {
   //   const hasVisited = localStorage.getItem("hasVisited");
