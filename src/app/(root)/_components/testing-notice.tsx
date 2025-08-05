@@ -8,13 +8,13 @@ import { Button } from "~/components/ui/button";
 export function TestingNotice() {
   const [showNotice, setShowNotice] = useState(false);
 
-  useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisited");
-    if (!hasVisited) {
-      setShowNotice(true);
-      localStorage.setItem("hasVisited", "true");
-    }
-  }, []);
+  // useEffect(() => {
+  //   const hasVisited = localStorage.getItem("hasVisited");
+  //   if (!hasVisited) {
+  //     setShowNotice(true);
+  //     localStorage.setItem("hasVisited", "true");
+  //   }
+  // }, []);
 
   if (!showNotice) return null;
 
