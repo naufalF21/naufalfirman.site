@@ -13,7 +13,7 @@ const Hero = () => {
         Currently, I work as a freelance web developer. I build websites for
         clients in different industries. Previously, I gained valuable
         experience in building websites from freelancing and internship during
-        college. Casino Jackpot
+        college. Casino Jackpot fatal error
       </p>
       <div className="flex flex-col gap-3 md:flex-row">
         <Link href="/#work" scroll={true}>
