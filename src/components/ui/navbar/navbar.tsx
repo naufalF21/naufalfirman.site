@@ -56,6 +56,19 @@ const Navbar = () => {
                     </Link>
                   </NavigationMenuItem>
                 ))}
+                <NavigationMenuItem className="capitalize">
+                    <Link
+                      href={`/${"testing"}`}
+                      legacyBehavior
+                      passHref
+                    >
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
+                        Testing
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
             {/* resume button */}
