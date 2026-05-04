@@ -7,31 +7,18 @@ datasource db {
   provider = "postgresql"
 }
 
-enum Role {
-  USER
-  ADMIN
-  SUPER_ADMIN
-}
-
-enum TokenType {
-  ACCESS
-  REFRESH
-  RESET_PASSWORD
-  EMAIL_VERIFY
-}
-
 model User {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        String    @id @default(cuid())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
   name      String
-  email     String   @unique
+  email     String    @unique
   password  String
-  role      Role     @default(USER)
-  isActive  Boolean  @default(true)
+  role      Role      @default(USER)
+  isActive  Boolean   @default(true)
   avatar    String?
-  tokens    Token[]
   sessions  Session[]
+  tokens    Token[]
 
   @@map("users")
 }
@@ -61,4 +48,17 @@ model Session {
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("sessions")
+}
+
+enum Role {
+  USER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum TokenType {
+  ACCESS
+  REFRESH
+  RESET_PASSWORD
+  EMAIL_VERIFY
 }
