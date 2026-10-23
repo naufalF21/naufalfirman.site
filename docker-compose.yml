@@ -1,0 +1,20 @@
+services:
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: naufalfirman-site
+    restart: unless-stopped
+    ports:
+      # Format: "HOST_PORT:CONTAINER_PORT"
+      # Ganti 3000 dengan port yang tersedia di VPS kamu
+      - "3000:80"
+
+    # Jika menggunakan Docker network bersama reverse proxy (misal: nginx-proxy-manager / traefik),
+    # hilangkan komentar baris di bawah:
+    # networks:
+    #   - web-proxy
+
+# networks:
+#   web-proxy:
+#     external: true
